@@ -1,0 +1,10 @@
+{
+  "python.pythonPath": "venv/bin/python3",
+  "python.terminal.activateEnvironment": false,
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.pylintUseMinimalCheckers": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "restructuredtext.confPath": "${workspaceFolder}/venv/lib/python3.6/site-packages/importlib_metadata/docs"
+}
