@@ -15,7 +15,8 @@ def pytest_addoption(parser):
     group.addoption(
         "--vscodedebug-port",
         action="store",
-        default="10001",
+        type=int,
+        default=10001,
         dest="vscodedebug_port",
         help="Port for debugger to listen on",
     )
@@ -32,7 +33,9 @@ def pytest_collection_finish(session: pytest.Session) -> None:
 
             debugpy.listen(("0.0.0.0", session.config.option.vscodedebug_port))
             print(
-                "⏳ VS Code debugger can now be attached",
+                "⏳ VS Code debugger can now be attached on port {}".format(
+                    session.config.option.vscodedebug_port
+                ),
                 flush=True,
             )
             debugpy.wait_for_client()
