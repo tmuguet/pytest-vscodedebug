@@ -27,8 +27,10 @@ before_cache:
 cache:
   directories:
   - "$HOME/.cache/pip"
+
 deploy:
   provider: pypi
+  skip_existing: true
   user: tmuguet
   on:
     tags: true
