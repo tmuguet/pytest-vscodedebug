@@ -15,7 +15,7 @@ def read(fname):
 
 setup(
     name="pytest-vscodedebug",
-    version="0.1.0",
+    use_scm_version=True,
     author="Thomas Muguet",
     author_email="hi@tmuguet.me",
     maintainer="Thomas Muguet",
@@ -26,6 +26,7 @@ setup(
     long_description=read("README.rst"),
     py_modules=["pytest_vscodedebug"],
     python_requires=">=3.5",
+    setup_requires=["setuptools_scm"],
     install_requires=["pytest>=3.5.0", "debugpy>=1.0.0rc2"],
     classifiers=[
         "Development Status :: 4 - Beta",
