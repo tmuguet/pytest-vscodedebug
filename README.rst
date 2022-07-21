@@ -16,6 +16,29 @@ pytest-vscodedebug
 
 A `pytest`_ plugin to easily enable debugging tests within Visual Studio Code.
 
+**WARNING**: this is obsolete. VSCode supports debugging tests via configuration, e.g.:
+
+.. code-block:: json
+
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: Debug Tests",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "purpose": [
+                    "debug-test"
+                ],
+                "console": "integratedTerminal",
+                "justMyCode": false
+            }
+        ]
+    }
+
+Such configuration will be used when debugging from the "Testing" panel of VSCode.
+
 Features
 --------
 
